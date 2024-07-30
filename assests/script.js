@@ -29,9 +29,7 @@ btn.addEventListener('click',()=>{
     taskList.innerHTML+=list;     
     text.value='';   
     }
-    else{
-        //empty text box portion (show error)
-    }
+    
 })
 
 
