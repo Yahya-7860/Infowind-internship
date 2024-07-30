@@ -49,6 +49,7 @@ body{
     height: 70vh;  
     border: solid var(--lightGrey1) .1rem;
     border-radius: 2rem;
+    overflow: hidden;
 }
 
 .container_content{
@@ -58,6 +59,7 @@ body{
 li{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .first{
