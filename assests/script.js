@@ -1,49 +1,23 @@
-var btn = document.querySelector(".addBtn");
-var taskList = document.querySelector(".task");
-var text = document.querySelector(".textValue");
-var marked = document.querySelector(".marked")
-var listText = document.querySelector(".listText");
-var cross = document.querySelector(".fa-solid");
-var ul = document.querySelector(".task");
+let btn = document.querySelector(".addBtn");
+let ul = document.querySelector(".task");
+let text = document.querySelector(".textValue");
 
 
+import { strikeThr, addTask, removeTask } from "./moduleBundle.js";
 
+//pressing 'add' button to add list
+btn.addEventListener("click",addTask)
 
-//adding the task to the list
-
-
-
-
-btn.addEventListener('click',()=>{
-
-    if(text.value.length!=0){
-        var list = `<li class="list">
-        <div class="first">
-            <input type="checkbox" class="marked">
-            <p class="text listText">${text.value}</p>
-        </div>
-        <div>
-            <i class="fa-solid fa-circle-xmark"></i>
-        </div>  
-    </li>`
-    taskList.innerHTML+=list;     
-    text.value='';   
+//pressing enter key to add list
+text.addEventListener('keypress',(e)=>{
+    if(e.key=="Enter"){
+        e.preventDefault();
+        addTask();
     }
-    
 })
-
 
 //marking the task (strike through)
-ul.addEventListener("click",(e)=>{
-    if(e.target.nodeName === "INPUT"){
-        e.target.parentElement.parentElement.classList.toggle("check_list")
-    }
-})
-
+ul.addEventListener("click",strikeThr)
 
 //removing added list
-ul.addEventListener("click",(e)=>{
-    if(e.target.nodeName === "I"){
-        e.target.parentElement.parentElement.remove();
-    }
-})
+ul.addEventListener("click",removeTask)
