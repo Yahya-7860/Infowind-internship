@@ -1,36 +1,35 @@
-var btn = document.querySelector(".addBtn");
-var taskList = document.querySelector(".task");
-var text = document.querySelector(".textValue");
-var marked = document.querySelector(".marked")
-var listText = document.querySelector(".listText");
-var cross = document.querySelector(".fa-solid");
-var ul = document.querySelector(".task");
-
-
+let btn = document.querySelector(".addBtn");
+let taskList = document.querySelector(".task");
+let text = document.querySelector(".textValue");
+let marked = document.querySelector(".marked")
+let listText = document.querySelector(".listText");
+let cross = document.querySelector(".cross");
+let ul = document.querySelector(".task");
 
 
 //adding the task to the list
-
-
-
-
-btn.addEventListener('click',()=>{
-
+function addTask(){
     if(text.value.length!=0){
-        var list = `<li class="list">
+        let list = `<li class="list">
         <div class="first">
             <input type="checkbox" class="marked">
             <p class="text listText">${text.value}</p>
         </div>
         <div>
-            <i class="fa-solid fa-circle-xmark"></i>
+            <i class="fa-solid cross fa-circle-xmark"></i>
         </div>  
     </li>`
     taskList.innerHTML+=list;     
     text.value='';   
     }
-    else{
-        //empty text box portion (show error)
+}
+btn.addEventListener('click',addTask)
+
+//pressing enter key to add
+text.addEventListener('keypress',(e)=>{
+    if(e.key=="Enter"){
+        e.preventDefault();
+        addTask();
     }
 })
 

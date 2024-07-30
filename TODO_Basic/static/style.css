@@ -1,25 +1,35 @@
+:root{
+    --lightblue:rgb(0, 131, 238);
+    --darkBlue: blue;
+    --red:rgb(143, 0, 0);
+    --white:white;
+    --grey:grey;
+    --lightGrey1:rgb(175, 175, 175);
+    --lightGrey2:rgb(211, 211, 211);
+
+}
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box ;
-    /* font-size: 62.5%; */
 }
 
 body{
-    background-color: rgb(211, 211, 211);
+    background-color: var(--lightGrey2);
 }
 
 .header{
     width: 100vw;
     height: 4rem;
-    background-color: rgb(255, 255, 255);
+    background-color:var(--white);
     display: flex;
     align-items: center; 
     justify-content: space-between;
-    box-shadow: 0 .01rem 1rem rgb(150, 150, 150);
+    box-shadow: 0 .01rem 1rem var(--lightGrey1);
 } 
 .header h2{
-    color: rgb(30, 120, 255);
+    color: var(--lightblue);
     margin-left: 2.5rem;
 }
 .header h3{
@@ -37,7 +47,7 @@ body{
 .container{
     width: 70vw;
     height: 70vh;  
-    border: solid rgb(175, 175, 175) .1rem;
+    border: solid var(--lightGrey1) .1rem;
     border-radius: 2rem;
 }
 
@@ -47,8 +57,6 @@ body{
 
 li{
     display: flex;
-    /* gap: 30rem; */
-    /* margin-bottom: 1rem;     */
     justify-content: space-between;
 }
 
@@ -60,8 +68,8 @@ li{
 .textValue{
     padding: .8rem;
     border-radius: 1rem;
-    border: solid grey .03rem;
-    width:90%;
+    border: solid var(--grey) .03rem;
+    width:calc(100% - 10px);
     outline: none;
 }
 
@@ -74,17 +82,17 @@ li{
 .addBtn{
     padding: .8rem;
     border-radius: 1rem;
-    border: solid grey .03rem;
-    background-color: rgb(0, 131, 238);
-    color: white;
+    border: solid var(--grey) .03rem;
+    background-color: var(--lightblue);
+    color:var(--white);
 }
 
 .addBtn:active{
-    background-color: blue;
-    color: white;
+    background-color: var(--darkBlue);
+    color:var(--white);
 }
 .fa-solid:active{
-    color: rgb(143, 0, 0);
+    color: var(--red);
 }
 
 .check_list{
@@ -95,8 +103,8 @@ li{
     .textValue{
         padding: .5rem; 
         border-radius: .8rem;
-        border: solid grey .03rem;
-        width:100%;
+        border: solid var(--grey) .03rem;
+        width:calc(100% - 10px);
         font-size: .65rem ;
         outline: none;
     }   
@@ -105,11 +113,13 @@ li{
         gap: .5rem;
     }
     .addBtn{
-        padding: .5rem;
+        padding: .3rem;
         border-radius: .8rem;
-        border: solid grey .03rem;
-        background-color: rgb(0, 131, 238);
-        color: white;
+        border: solid var(--grey) .03rem;
+        background-color: var(--lightblue);
+        color: var(--white);
+        width:calc(100% - 10px);
+
     }
     .text{
         font-size: .8rem;
