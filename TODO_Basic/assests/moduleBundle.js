@@ -1,5 +1,3 @@
-import { addTask } from "./addTask.js";
-import { strikeThr } from "./strikeTask.js";
-import { removeTask } from "./removeTask.js";
-
-export {addTask, strikeThr, removeTask};
+export * from "./addTask.js";
+export *  from "./strikeTask.js";
+export *  from "./removeTask.js";

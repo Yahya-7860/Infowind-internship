@@ -1,7 +1,7 @@
 let btn = document.querySelector(".addBtn");
 let ul = document.querySelector(".task");
 let text = document.querySelector(".textValue");
-
+console.log('javascript runs through a single file in browser')
 
 import { strikeThr, addTask, removeTask } from "./moduleBundle.js";
 
